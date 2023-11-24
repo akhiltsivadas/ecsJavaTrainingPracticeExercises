@@ -1,0 +1,36 @@
+package maven_new_sql;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class main {
+
+	public static void main(String[] args) 
+	{
+		
+		String url="jdbc:mysql://localhost:3306/db1";
+		String  username="root";
+		String  password= "root";
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection connection=DriverManager.getConnection(url,username,password);
+			System.out.print("connection sucessful");  
+			String query="insert into student(student_id, student_name) values('0010','rohith')"; // creating a query to insert into table
+			Statement Statement =connection.createStatement();
+			Statement.executeQuery(query);       
+			
+			
+			
+		} catch (ClassNotFoundException e) {
+			
+			e.printStackTrace();
+		} catch (SQLException e) {			
+			e.printStackTrace();
+		}
+		
+
+	}
+
+}

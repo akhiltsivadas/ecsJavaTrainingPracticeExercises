@@ -1,0 +1,15 @@
+package enumDemo;
+
+public class Main {
+	enum Status 
+	{
+	running,failed,reset
+	}
+
+	public static void main(String[] args) 
+	{
+		Status st=Status.running;
+		System.out.println(st);
+	}
+
+}

@@ -1,0 +1,44 @@
+package thisAndSuper;
+
+class A 
+{
+	public A() {
+		System.out.println("in A");	
+	
+		}
+	
+	public A(int a)// PARAMETRIC CONSTRUCTOR  -USER CREATED -NOT DEFAULT
+	{ 
+	
+	System.out.println("IN B INT");
+
+}
+}
+
+class B extends A{
+	public B()    //DEFAULT CONSTRUCTOR. IF ITS NOT CREATED JAVA WILL CREATE ONR FOR US
+	{		
+		System.out.println("IN B");
+	}
+	
+	public B(int a) { // PARAMETRIC CONSTRUCTOR  -USER CREATED -NOT DEFAULT
+		
+		System.out.println("IN B INT");
+	}
+	
+}
+
+	
+	
+	
+
+
+public class main {
+
+	public static void main(String[] args) {
+		//B obj1=new B(); // when this object is created and called its constructor it executes sub classes also
+ B obj1=new B(6);
+
+	}
+
+}

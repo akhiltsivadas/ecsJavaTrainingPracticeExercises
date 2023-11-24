@@ -1,0 +1,37 @@
+package thisAndSuper;
+
+class A 
+{
+	public A() {
+	System.out.println("in A");
+	
+	
+}
+}
+
+class B extends A{
+	public B() {
+		
+		System.out.println("IN B");
+	}
+	
+	public B(int a) {
+		
+		System.out.println("IN B INT")
+	}
+	
+}
+
+	
+	
+	
+
+
+public class main {
+
+	public static void main(String[] args) {
+		B obj1=new B(); // when this object is created and called its constructor it executes sub classes also
+
+	}
+
+}

@@ -1,0 +1,13 @@
+
+@FunctionalInterface // This is an annotation functional interface have only one method
+interface A {
+	public void show();
+}
+
+public class Main {
+
+	public static void main(String[] args) {
+		A sh = () -> System.out.println("in show"); // We can write this in one line
+		sh.show();
+	}
+}
